@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music History</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Spirax" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<h1 lang="fr">Music History 101</h1>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a href="#">View Music</a></li>
+				<li><a href="#">Add Music</a></li>
+				<li><a href="#">Profile</a></li>
+			</ul>
+		</nav>
+
+		<div class="make-selections">
+			<form>
+				<p>Song Length</p>
+					<input type="range" id="songLength" value="90">
+				<p>Artist</p>
+					<select>
+					  <option value="Dessa">Dessa</option>
+					  <option value="RuthB">Ruth B</option>
+					  <option value="Metric">Metric</option>
+					  <option value="Vienna">Vienna Teng</option>
+					  <option value="Jannelle">Janelle Monae</option>
+					</select>
+				<p>Album</p>
+					<select>
+					  <!-- Dessa Albums -->
+					  <option value="partsOfSpeech">Parts of Speech</option>
+					  <option value="allHands">All Hands</option>
+					  <!-- Vienna Teng Albums -->
+					  <option value="inlandTerritory">Inland Territory</option>
+					  <option value="warmStrangers">Warm Strangers</option>
+					  <option value="wakingHour">Waking Hour</option>
+					  <!-- Ruth B Albums -->
+					  <option value="safeHaven">Safe Haven</option>
+					  <!-- Metric Albums -->
+					  <option value="pagansInVegas">Pagans in Vegas</option>
+					  <option value="synthetica">Synthetica</option>
+					  <option value="Fantasies">Fantasies</option>
+					  <!-- Janelle Monae Albums -->
+					  <option value="theElectricLady">The Electric Lady</option>
+					  <option value="theArchAndroid">The Arch Android</option>
+					</select>
+				<p>Genre</p>
+					  <input type="checkbox" name="Genre" value="altHipHop">Alternative Hip Hop<br>
+					  <input type="checkbox" name="Genre" value="indieRock" checked>Indie Rock<br>
+					  <input type="checkbox" name="Genre" value="folk">Indie Folk<br>
+					  <input type="checkbox" name="Genre" value="contempRB">Contemporary R&amp;B<br>
+					  <input type="checkbox" name="Genre" value="pop">Pop<br>
+			</form>
+		</div>
+		<div class="display-selections">
+			<h2>Lost Boy</h2>
+			<p> Ruth B | The Intro | Pop Music </p>
+
+			<h2>Fighting Fish</h2>
+			<p> Dessa | Parts of Speech | Alternative Hip Hop </p>
+
+			<h2>Stray Italian Greyhound</h2>
+			<p> Vienna Teng | Inland Territory | Indie Folk </p>
+
+			<h2>Lie Lie Lie</h2>
+			<p> Metric | Pagans in Vegas | Indie Rock </p>
+		</div>
+	</div>
+</body>
+</html>

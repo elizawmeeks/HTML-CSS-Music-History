@@ -1,0 +1,75 @@
+/*Color palette:
+Grey: #B5C6CD 181, 195, 205 
+Dark Purple: #4A4C61 74 76 97
+Teal: 92, 289 170
+Peach: 232, 196 174
+Flesh: 231, 216 185*/
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #B5C6CD;
+	font-family: "Open Sans", sans-serif;
+	color: #4A4C61;
+}
+
+p {
+	margin: 7px;
+}
+
+a {
+	color: #4A4C61;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #E8C4AE;
+}
+
+h1 {
+	font-family: Spirax, cursive;
+	text-align: center;
+	background-color: rgba(92,289,170,.5);
+	margin: 2% 0 2%;
+	border: 2px solid #4A4C61;
+	box-shadow: inset 0 0 10px #4A4C61;
+}
+
+nav {
+	text-align: center;
+	margin: 2% 0;
+	background-color: rgba(92,289,170,.5);
+	border: 2px solid #4A4C61;
+	box-shadow: inset 0 0 10px #4A4C61;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+div.make-selections {
+	margin-top: 0;
+	height: 450px;
+	width: 20%;
+	padding: 10px 10px 0;
+	float: left;
+	background-color: rgba(92,289,170,.5);
+	border: 2px solid #4A4C61;
+	box-shadow: inset 0 0 10px #4A4C61;
+}
+
+div.display-selections {
+	margin: 0;
+	height: 450px;
+	width: 78%;
+	padding: 15px;
+	float: right;
+	background-color: rgba(92,289,170,.5);
+	border: 2px solid #4A4C61;
+	box-shadow: inset 0 0 10px #4A4C61;
+}
