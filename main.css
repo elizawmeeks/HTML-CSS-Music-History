@@ -52,6 +52,11 @@ li {
 	padding: 0 10px;
 }
 
+select {
+	background-color: #E7D8B9;
+	color: #4A4C61;
+}
+
 div.make-selections {
 	margin-top: 0;
 	height: 450px;
