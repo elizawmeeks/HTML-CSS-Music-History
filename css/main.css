@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Rubik+Mono+One');
+
+html, body {
+	height: 100%;
+}
+
+div#nav-mobile {
+	margin-top: 64px;
+}
+
+main {
+	padding-left: 300px;
+}
+
+h1, h4 {
+	font-family: 'Rubik Mono One', sans-serif;
+}
+
+h2, h3 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+h3 {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+a.dropdown-button {
+	width: 100%;
+}
+
+.container {
+	width: 80%;
+}

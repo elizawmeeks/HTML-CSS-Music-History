@@ -2,78 +2,128 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Music History</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Spirax" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="main.css">
+	<meta charset="utf-8">
+	<title>Music History</title>
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <body>
-	<div class="wrapper">
-		<header>
-			<h1 lang="fr">Music History 101</h1>
-		</header>
+<!-- Header to show on smaller screens? -->
+	<header></header>
+<!-- Header/nav on larger screens -->
+	<nav class="cyan darken-2">
+			<div class="nav-wrapper">
+			<a href="index.html" class="brand-logo align-left"><h4 class="left-align">MH101</h4></a>
+				<div class="fixed-action-btn horizontal">
+					<a class=btn-floating btn-large cyan darken-5">
+						<i class="large material-icons">radio</i>
+					</a>
+					<ul>
+						<li><a class="btn-floating pink"><i class="material-icons">queue_music</i></a></li>
+						<li><a class="btn-floating pink"><i class="material-icons">queue</i></a></li>
+						<li><a class="btn-floating pink"><i class="material-icons">perm_identity</i></a></li>
+					</ul>
+				</div>
+					
 
-		<nav>
-			<ul>
-				<li><a href="#">View Music</a></li>
-				<li><a href="#">Add Music</a></li>
-				<li><a href="#">Profile</a></li>
+					<!-- <ul class="right">
+						<li class="active"><a href="#">View Music</a></li>
+						<li><a href="#">Add Music</a></li>
+						<li><a href="#">Profile</a></li>
+					</ul> -->
+			</div>
+	</nav>
+
+<!-- Side Nav for song selection -->
+	<div id="nav-mobile" class="side-nav fixed grey lighten-2">
+		<div class="container">
+		<!-- Song Length -->
+			<h3>Song Length</h3>
+				<p class="range-field">
+					<input type="range" id="songLength" min="0" max="100" value="90" class="pink">
+				</p>
+		<!-- Artist -->
+			 <!-- Dropdown Trigger -->
+  			<a class='dropdown-button btn pink' href='#' data-activates='dropdown1'>Artist</a>
+			<!-- Dropdown Structure -->
+			<ul id="dropdown1" class="dropdown-content">
+				<li><a href="#!">Dessa</a></li>
+				<li><a href="#!">Ruth B</a></li>
+				<li><a href="#!">Vienna Teng</a></li>
+				<li><a href="#!">Janelle Monae</a></li>
+				<li><a href="#!">Metric</a></li>
 			</ul>
-		</nav>
 
-		<div class="make-selections">
-			<form>
-				<p>Song Length</p>
-					<input type="range" id="songLength" value="90">
-				<p>Artist</p>
-					<select>
-					  <option value="Dessa">Dessa</option>
-					  <option value="RuthB">Ruth B</option>
-					  <option value="Metric">Metric</option>
-					  <option value="Vienna">Vienna Teng</option>
-					  <option value="Jannelle">Janelle Monae</option>
-					</select>
-				<p>Album</p>
-					<select>
-					  <!-- Dessa Albums -->
-					  <option value="partsOfSpeech">Parts of Speech</option>
-					  <option value="allHands">All Hands</option>
-					  <!-- Vienna Teng Albums -->
-					  <option value="inlandTerritory">Inland Territory</option>
-					  <option value="warmStrangers">Warm Strangers</option>
-					  <option value="wakingHour">Waking Hour</option>
-					  <!-- Ruth B Albums -->
-					  <option value="safeHaven">Safe Haven</option>
-					  <!-- Metric Albums -->
-					  <option value="pagansInVegas">Pagans in Vegas</option>
-					  <option value="synthetica">Synthetica</option>
-					  <option value="Fantasies">Fantasies</option>
-					  <!-- Janelle Monae Albums -->
-					  <option value="theElectricLady">The Electric Lady</option>
-					  <option value="theArchAndroid">The Arch Android</option>
-					</select>
-				<p>Genre</p>
-					  <input type="checkbox" name="Genre" value="altHipHop">Alternative Hip Hop<br>
-					  <input type="checkbox" name="Genre" value="indieRock" checked>Indie Rock<br>
-					  <input type="checkbox" name="Genre" value="folk">Indie Folk<br>
-					  <input type="checkbox" name="Genre" value="contempRB">Contemporary R&amp;B<br>
-					  <input type="checkbox" name="Genre" value="pop">Pop<br>
-			</form>
-		</div>
-		<div class="display-selections">
-			<h2>Lost Boy</h2>
-			<p> Ruth B | The Intro | Pop Music </p>
+			<br><br>
 
-			<h2>Fighting Fish</h2>
-			<p> Dessa | Parts of Speech | Alternative Hip Hop </p>
+		<!-- Album -->
 
-			<h2>Stray Italian Greyhound</h2>
-			<p> Vienna Teng | Inland Territory | Indie Folk </p>
+			<a class='dropdown-button btn pink' href='#' data-activates='dropdown2'>Album</a>
+			<!-- Dropdown Structure -->
+			<ul id="dropdown2" class="dropdown-content">
+				<li><a href="#!">Parts of Speech</a></li>
+				<li><a href="#!">All Hands</a></li>
+				<li><a href="#!">Safe Haven</a></li>
+				<li><a href="#!">Inland Territory</a></li>
+				<li><a href="#!">Warm Strangers</a></li>
+				<li><a href="#!">Waking Hour</a></li>
+				<li><a href="#!">The Electric Lady</a></li>
+				<li><a href="#!">The Arch Android</a></li>
+				<li><a href="#!">Pagans in Vegas</a></li>
+				<li><a href="#!">Synthetica</a></li>
+				<li><a href="#!">Fantasies</a></li>
+			</ul>
 
-			<h2>Lie Lie Lie</h2>
-			<p> Metric | Pagans in Vegas | Indie Rock </p>
+		<!-- Genre -->
+			<h3>Genre</h3>
+				<p>
+					<input type="checkbox" id="altHip">
+					<label for="altHip">Alternative Hip Hop</label>
+				</p>
+				<p>
+					<input type="checkbox" id="indieRock">
+					<label for="indieRock">Indie Rock</label>
+				</p>
+				<p>
+					<input type="checkbox" id="indieFolk">
+					<label for="indieFolk">Indie Folk</label>
+				</p>
+				<p>
+					<input type="checkbox" id="contempRB">
+					<label for="contempRB">Contemporary R&amp;B</label>
+				</p>
+				<p>
+					<input type="checkbox" id="pop">
+					<label for="pop">Pop</label>
+				</p>
+				<a class="waves-effect waves-light btn pink">Filter</a>
 		</div>
 	</div>
+<!-- Main, songs selected -->
+	<main>
+		<div class="container">
+			<h2>Lost Boy</h2>
+			<p> Ruth B <span class="pink-text">|</span> The Intro <span class="pink-text">|</span> Pop</p>
+
+			<h2>Fighting Fish</h2>
+			<p> Dessa <span class="pink-text">|</span> Parts of Speech <span class="pink-text">|</span> Alternative Hip Hop</p>
+
+			<h2>Stray Italian Greyhound</h2>
+			<p> Vienna Teng <span class="pink-text">|</span> Inland Territory <span class="pink-text">|</span> Indie Folk</p>
+
+			<h2>Lie Lie Lie</h2>
+			<p> Metric <span class="pink-text">|</span> Pagans in Vegas <span class="pink-text">|</span> Indie Rock</p>
+		</div>
+	</main>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
