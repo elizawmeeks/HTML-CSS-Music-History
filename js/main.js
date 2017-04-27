@@ -1,5 +1,5 @@
 console.log("hihi");
-
+// Event Listeners to show and hide pages using Floating Action Button
 let addMusic = document.getElementById("addMusic");
 let viewMusic = document.getElementById("viewMusic");
 let profile = document.getElementById("profile");
@@ -19,3 +19,6 @@ viewMusic.addEventListener("click", function(event){
 	addMusicView.classList.add("hidden");
 	sideNav.classList.remove("hidden");
 });
+
+// Displaying Songs
+
