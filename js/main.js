@@ -43,14 +43,15 @@ dataRequest.send();
 function showData (songs){
 	var write = document.getElementById("listMusicView");
 	var songOutput = "";
-	for (var i = 0; i < songs.artist.length; i++){
-			var artistName = songs.artist[i].name;
-			var genre = songs.artist[i].genre;
-			var j = Math.floor((Math.random() * songs.artist[i].albums.length));
-			var k = Math.floor((Math.random() * songs.artist[i].albums[j].songs.length));
+	for (var i = 0; i < 4; i++){
+			var h = Math.floor((Math.random() * songs.artist.length));
+			var artistName = songs.artist[h].name;
+			var genre = songs.artist[h].genre;
+			var j = Math.floor((Math.random() * songs.artist[h].albums.length));
+			var k = Math.floor((Math.random() * songs.artist[h].albums[j].songs.length));
 			console.log("j", j)
-			var albumName = songs.artist[i].albums[j].album_name;
-			var songName = songs.artist[i].albums[j].songs[k];
+			var albumName = songs.artist[h].albums[j].album_name;
+			var songName = songs.artist[h].albums[j].songs[k];
 		songOutput += 	`<div class="row">
 							<div class="col s12">
 								<h2>${songName}</h2>
