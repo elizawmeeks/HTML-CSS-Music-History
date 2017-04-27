@@ -1,7 +1,8 @@
 {
 	"artist": [
 		{
-			"artist_name": "Dessa",
+			"name": "Dessa",
+			"genre": "Alternative Hip Hop",
 			"albums": [
 				{
 					"album_name": "Parts of Speech",
@@ -11,6 +12,7 @@
 		},
 		{
 			"name": "Ruth B",
+			"genre": "Pop",
 			"albums": [
 				{
 					"album_name": "Safe Haven",
@@ -20,6 +22,7 @@
 		},
 		{
 			"name": "Vienna Teng",
+			"genre": "Indie Folk",
 			"albums": [
 				{
 					"album_name": "Inland Territory",
@@ -37,6 +40,7 @@
 		},
 		{
 			"name": "Janelle Monae",
+			"genre": "Contemporary R&B",
 			"albums": [
 				{
 					"album_name": "Metropolis: Suite I (The Chase)",
@@ -44,26 +48,17 @@
 				},
 				{
 					"album_name": "The ArchAndroid",
-					"songs": [
-						{
-							"suite_II": ["Suite II Overture", "Dance or Die", "Faster", "Locked Inside", "Sir Greendown", "Cold War", "Tightrope", "Neon Gumbo", "Oh, Maker", "Come Alive (The War of the Roses)", "Mushrooms & Roses"],
-							"suite_III": ["Suite III Overture", "Neon Valley Street", "Make the Bus", "Wondaland", "57821", "Say You'll Go", "BabopbyeYa"]
-						}
-					]
+					"songs": ["Suite II Overture", "Dance or Die", "Faster", "Locked Inside", "Sir Greendown", "Cold War", "Tightrope", "Neon Gumbo", "Oh, Maker", "Come Alive (The War of the Roses)", "Mushrooms & Roses", "Suite III Overture", "Neon Valley Street", "Make the Bus", "Wondaland", "57821", "Say You'll Go", "BabopbyeYa"]
 				},
 				{
 					"album_name": "The Electric Lady",
-					"songs": [
-						{
-							"suite_IV": ["Suite IV Electric Overture", "Given' Em What They Love", "Q.U.E.E.N.", "Electric Lady", "Good Morning Midnight (Interlude)", "PrimeTime", "We Were Rock & Roll", "The Chrome Shoppe (Interlude)", "Dance Apocalyptic", "Look into My Eyes"],
-							"suite_V": ["Suite V Electric Overture", "It's Code", "Ghetto Woman", "Our Favorite Fugitive (Interlude)", "Victory", "Can't Live Without Your Love", "Sally Ride", "Dorothy Dandridge Eyes", "What an Experience"]
-						}
-					]
+					"songs": ["Suite IV Electric Overture", "Given' Em What They Love", "Q.U.E.E.N.", "Electric Lady", "Good Morning Midnight (Interlude)", "PrimeTime", "We Were Rock & Roll", "The Chrome Shoppe (Interlude)", "Dance Apocalyptic", "Look into My Eyes", "Suite V Electric Overture", "It's Code", "Ghetto Woman", "Our Favorite Fugitive (Interlude)", "Victory", "Can't Live Without Your Love", "Sally Ride", "Dorothy Dandridge Eyes", "What an Experience"]
 				}
 			]
 		},
 		{
 			"name": "Metric",
+			"genre": "Indie Rock",
 			"albums": [
 				{
 					"album_name": "Pagans in Vegas",

@@ -31,6 +31,7 @@ function dataRequestComplete(event){
 	console.log("The file has loaded");
 	var data = JSON.parse(event.target.responseText);
 	console.log("The data is: ", data);
+	showData(data);
 }
 
 var dataRequestFailed = (event) => console.log("Oops an error occurred while getting the data");
@@ -40,15 +41,28 @@ dataRequest.open("GET", "songs.json");
 dataRequest.send();
 
 function showData (songs){
-	var write = document.getElementById("stickItHere");
+	var write = document.getElementById("listMusicView");
 	var songOutput = "";
-	for (var i = 0; i < 4, i++){
-		
+	for (var i = 0; i < songs.artist.length; i++){
+			var artistName = songs.artist[i].name;
+			var genre = songs.artist[i].genre;
+			var j = Math.floor((Math.random() * songs.artist[i].albums.length));
+			var k = Math.floor((Math.random() * songs.artist[i].albums[j].songs.length));
+			console.log("j", j)
+			var albumName = songs.artist[i].albums[j].album_name;
+			var songName = songs.artist[i].albums[j].songs[k];
+		songOutput += 	`<div class="row">
+							<div class="col s12">
+								<h2>${songName}</h2>
+								<p> ${artistName} <span class="pink-text">|</span> ${albumName} <span class="pink-text">|</span> ${genre}</p>
+							</div>
+						</div>`;
 	}
+	// for (prop in songs){
+	// 	var x = songs[prop];
+	// 	songOutput += x;
+	// }
+
+	write.innerHTML += songOutput;
 }
 
-
-// `<div class="col s12">
-// 	<h2>Lost Boy</h2>
-// 	<p> Ruth B <span class="pink-text">|</span> The Intro <span class="pink-text">|</span> Pop</p>
-// </div>`
