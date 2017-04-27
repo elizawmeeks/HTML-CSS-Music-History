@@ -21,4 +21,34 @@ viewMusic.addEventListener("click", function(event){
 });
 
 // Displaying Songs
+	// Variable to load JSON Page
+var dataRequest = new XMLHttpRequest();
+	// Event Listeners for loading
+dataRequest.addEventListener("load", dataRequestComplete);
+dataRequest.addEventListener("error", dataRequestFailed);
+	// Functions tied to Event Listeners
+function dataRequestComplete(event){
+	console.log("The file has loaded");
+	var data = JSON.parse(event.target.responseText);
+	console.log("The data is: ", data);
+}
 
+var dataRequestFailed = (event) => console.log("Oops an error occurred while getting the data");
+
+
+dataRequest.open("GET", "songs.json");
+dataRequest.send();
+
+function showData (songs){
+	var write = document.getElementById("stickItHere");
+	var songOutput = "";
+	for (var i = 0; i < 4, i++){
+		
+	}
+}
+
+
+// `<div class="col s12">
+// 	<h2>Lost Boy</h2>
+// 	<p> Ruth B <span class="pink-text">|</span> The Intro <span class="pink-text">|</span> Pop</p>
+// </div>`

@@ -6,7 +6,7 @@
 				{
 					"album_name": "Parts of Speech",
 					"songs": ["The Man I Knew", "Call Off Your Ghost", "Warsaw", "Skeleton Key", "Dear Marie", "I'm Going Down", "Fighting Fish", "The Lamb", "Beekeeper", "Annabelle", "It's Only Me", "Sound the Bells"]
-				},
+				}
 			]
 		},
 		{
@@ -39,21 +39,41 @@
 			"name": "Janelle Monae",
 			"albums": [
 				{
-					"album_name": "Warm Strangers",
-					"songs": ["The Tower", "Momentum", "Gravity", "Daughter", "Between", "Say Uncle", "Drought", "Enough to Go By", "Unwritten Letter #1", "Eric's Song", "Soon Love Soon", "Lullaby for a Stormy Night", "Decade and One"]
+					"album_name": "Metropolis: Suite I (The Chase)",
+					"songs": ["The March of the Wolfmasters", "Violet Stars Happy Hunting!!!", "Many Moons", "Cybertronic Purgatory", "Sincerely, Jane"]
+				},
+				{
+					"album_name": "The ArchAndroid",
+					"songs": [
+						{
+							"suite_II": ["Suite II Overture", "Dance or Die", "Faster", "Locked Inside", "Sir Greendown", "Cold War", "Tightrope", "Neon Gumbo", "Oh, Maker", "Come Alive (The War of the Roses)", "Mushrooms & Roses"],
+							"suite_III": ["Suite III Overture", "Neon Valley Street", "Make the Bus", "Wondaland", "57821", "Say You'll Go", "BabopbyeYa"]
+						}
+					]
+				},
+				{
+					"album_name": "The Electric Lady",
+					"songs": [
+						{
+							"suite_IV": ["Suite IV Electric Overture", "Given' Em What They Love", "Q.U.E.E.N.", "Electric Lady", "Good Morning Midnight (Interlude)", "PrimeTime", "We Were Rock & Roll", "The Chrome Shoppe (Interlude)", "Dance Apocalyptic", "Look into My Eyes"],
+							"suite_V": ["Suite V Electric Overture", "It's Code", "Ghetto Woman", "Our Favorite Fugitive (Interlude)", "Victory", "Can't Live Without Your Love", "Sally Ride", "Dorothy Dandridge Eyes", "What an Experience"]
+						}
+					]
 				}
 			]
 		},
 		{
-			"name": "Metric"
+			"name": "Metric",
+			"albums": [
+				{
+					"album_name": "Pagans in Vegas",
+					"songs": ["Lie Lie Lie", "Fortunes", "The Shade", "Celebrate", "Cascades", "For Kicks", "Too Bad, So Sad", "Other Side", "Blind Valentine", "The Governess", "The Face Part I", "The Face Part II"]
+				},
+				{
+					"album_name": "Synthetica",
+					"songs": ["Artificial Nocturne", "Youth Without Youth", "Speed the Collapse", "Breathing Underwater", "Dreams So Real", "Lost Kitten", "The Void", "Synthetica", "Clone", "The Wanderlust", "Nothing But Time"]
+				}
+			]
 		}
 	]
 }
-
-// <!-- Janelle Monae Albums -->
-// <li><a href="#!">The Electric Lady</a></li>
-// <li><a href="#!">The Arch Android</a></li>
-// <!-- Metric Albums -->
-// <li><a href="#!">Pagans in Vegas</a></li>
-// <li><a href="#!">Synthetica</a></li>
-// <li><a href="#!">Fantasies</a></li>
