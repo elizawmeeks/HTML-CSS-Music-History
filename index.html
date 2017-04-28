@@ -113,42 +113,18 @@
 <!-- Main -->
 	<main>
 		<!-- List Music View -->
-		<div id="listMusicView" class="container">
-			<!-- <div class="row">
-				<div class="col s12">
-					<h2>Lost Boy</h2>
-					<p> Ruth B <span class="pink-text">|</span> The Intro <span class="pink-text">|</span> Pop</p>
-				</div>
-			</div> -->
-			<!-- <div class="row">
-				<div class="col s12">
-					<h2>Fighting Fish</h2>
-					<p> Dessa <span class="pink-text">|</span> Parts of Speech <span class="pink-text">|</span> Alternative Hip Hop</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12">
-					<h2>Stray Italian Greyhound</h2>
-					<p> Vienna Teng <span class="pink-text">|</span> Inland Territory <span class="pink-text">|</span> Indie Folk</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12">
-					<h2>Lie Lie Lie</h2>
-					<p> Metric <span class="pink-text">|</span> Pagans in Vegas <span class="pink-text">|</span> Indie Rock</p>
-				</div>
-			</div> -->
-				
+		<div id="listMusicView" class="container hidden">
 		</div>
 		<!-- Add Music View -->
-		<div id="addMusicView" class="container hidden">
+		<div id="addMusicView" class="container">
 			<div class="row">
 				<div class="col s12">
 					<input id="song" type="text"><label>Song</label>
 					<input id="artist" type="text"><label>Artist</label>
 					<input id="album" type="text"><label>Album</label>
 					<br><br>
-					<button>Add</button>
+					<button id="btn-addMusic">Add</button>
+					<p id="add-music-change"></p>
 				</div>
 			</div>
 		</div>
@@ -157,5 +133,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/addmusic.js"></script>
 </body>
 </html>
