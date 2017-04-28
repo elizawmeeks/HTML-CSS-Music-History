@@ -1,7 +1,7 @@
 # HTML-CSS-Music-History
 
-## Version 3
+## Music History 3
 
-I basically gave up on the instructions for music history 3 and (belatedly realized that I) kind of made up a melange of music history 3 and 4 (and also kind of didn't). But I think that my function that randomizes which 4 songs it shows is cool so I'm gonna leave it up there for now. Adding music adds it to the object, but I had trouble getting it to format exactly the same way with objects inside of arrays. I didn't output it to the dom because with the randomizing function it wouldn't necessarily dispaly. Basically I decided that I liked the randomizing function better than outputting all the songs for the moment.
+I basically gave up on the instructions for music history 3 and (belatedly realized that I) kind of made up a melange of music history 3 and 4 (and also kind of didn't). Basically my version of Music History 3 created a JSON file with all of my songs, and created an XHR request to output songs onto the main page. I still kind of thought that we only wanted 4 songs on the main page, so I built a function to randomly select which songs in the object are dispalyed, which I think is kind of cool. Adding music in the Add Music View adds it to the object (you know, as long as you don't refresh the page. We're gonna learn how to permanently hold onto information like this, right?), but I had trouble getting it to format exactly the same way with objects inside of arrays. I didn't output it to the dom because with the randomizing function it wouldn't necessarily dispaly. Basically I decided that I liked the randomizing function better than outputting all the songs for the moment.
 
-I might come back and make things align more with the instructions, but I also learned a lot and had a lot of fun which is, frankly, enough for me.
+I might come back and make things align more with the instructions, but I also learned a lot and had a lot of fun which is, frankly, enough for me. I think I'm more likely to come back for Music History 4 and follow those instructions better.
