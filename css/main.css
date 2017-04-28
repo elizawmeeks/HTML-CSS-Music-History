@@ -25,10 +25,18 @@ h3 {
 	text-align: center;
 }
 
+h4 {
+	padding-left: 10px;
+}
+
 a.dropdown-button {
 	width: 100%;
 }
 
 .container {
 	width: 80%;
+}
+
+.hidden {
+	display: none;
 }

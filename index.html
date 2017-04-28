@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -17,32 +16,34 @@
 <!-- Header to show on smaller screens? -->
 	<header></header>
 <!-- Header/nav on larger screens -->
-	<nav class="cyan darken-2">
+	<div class="navbar-fixed">
+		<nav class="cyan darken-2">
 			<div class="nav-wrapper">
-			<a href="index.html" class="brand-logo align-left"><h4 class="left-align">MH101</h4></a>
-				<div class="fixed-action-btn horizontal">
-					<a class=btn-floating btn-large cyan darken-5">
-						<i class="large material-icons">radio</i>
-					</a>
-					<ul>
-						<li><a class="btn-floating pink"><i class="material-icons">queue_music</i></a></li>
-						<li><a class="btn-floating pink"><i class="material-icons">queue</i></a></li>
-						<li><a class="btn-floating pink"><i class="material-icons">perm_identity</i></a></li>
-					</ul>
-				</div>
-					
-
-					<!-- <ul class="right">
-						<li class="active"><a href="#">View Music</a></li>
-						<li><a href="#">Add Music</a></li>
-						<li><a href="#">Profile</a></li>
-					</ul> -->
+				<a href="index.html" class="brand-logo align-left"><h4 class="left-align">MH101</h4></a>
+					<div class="fixed-action-btn horizontal">
+						<a class=btn-floating btn-large cyan darken-5">
+							<i class="large material-icons">radio</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating pink"><i id="viewMusic" class="material-icons">queue_music</i></a></li>
+							<li><a class="btn-floating pink"><i id="addMusic" class="material-icons">queue</i></a></li>
+							<li><a class="btn-floating pink"><i id="profile" class="material-icons">perm_identity</i></a></li>
+						</ul>
+					</div>
+						
+					<!-- List Elements in case I get rid of the floating button list -->
+						<!-- <ul class="right">
+							<li class="active"><a href="#">View Music</a></li>
+							<li><a href="#">Add Music</a></li>
+							<li><a href="#">Profile</a></li>
+						</ul> -->
 			</div>
-	</nav>
+		</nav>
+	</div>
 
 <!-- Side Nav for song selection -->
 	<div id="nav-mobile" class="side-nav fixed grey lighten-2">
-		<div class="container">
+		<div id="sideNavBar" class="container">
 		<!-- Song Length -->
 			<h3>Song Length</h3>
 				<p class="range-field">
@@ -67,17 +68,21 @@
 			<a class='dropdown-button btn pink' href='#' data-activates='dropdown2'>Album</a>
 			<!-- Dropdown Structure -->
 			<ul id="dropdown2" class="dropdown-content">
+				<!-- Dessa Albums -->
 				<li><a href="#!">Parts of Speech</a></li>
-				<li><a href="#!">All Hands</a></li>
+				<!-- Ruth B Albums -->
 				<li><a href="#!">Safe Haven</a></li>
+				<!-- Vienna Teng Albums -->
 				<li><a href="#!">Inland Territory</a></li>
 				<li><a href="#!">Warm Strangers</a></li>
 				<li><a href="#!">Waking Hour</a></li>
-				<li><a href="#!">The Electric Lady</a></li>
+				<!-- Janelle Monae Albums -->
+				<li><a href="#!">Metropolis: Suite I</a></li>
 				<li><a href="#!">The Arch Android</a></li>
+				<li><a href="#!">The Electric Lady</a></li>
+				<!-- Metric Albums -->
 				<li><a href="#!">Pagans in Vegas</a></li>
 				<li><a href="#!">Synthetica</a></li>
-				<li><a href="#!">Fantasies</a></li>
 			</ul>
 
 		<!-- Genre -->
@@ -105,25 +110,29 @@
 				<a class="waves-effect waves-light btn pink">Filter</a>
 		</div>
 	</div>
-<!-- Main, songs selected -->
+<!-- Main -->
 	<main>
-		<div class="container">
-			<h2>Lost Boy</h2>
-			<p> Ruth B <span class="pink-text">|</span> The Intro <span class="pink-text">|</span> Pop</p>
-
-			<h2>Fighting Fish</h2>
-			<p> Dessa <span class="pink-text">|</span> Parts of Speech <span class="pink-text">|</span> Alternative Hip Hop</p>
-
-			<h2>Stray Italian Greyhound</h2>
-			<p> Vienna Teng <span class="pink-text">|</span> Inland Territory <span class="pink-text">|</span> Indie Folk</p>
-
-			<h2>Lie Lie Lie</h2>
-			<p> Metric <span class="pink-text">|</span> Pagans in Vegas <span class="pink-text">|</span> Indie Rock</p>
+		<!-- List Music View -->
+		<div id="listMusicView" class="container">
+		</div>
+		<!-- Add Music View -->
+		<div id="addMusicView" class="container hidden">
+			<div class="row">
+				<div class="col s12">
+					<input id="song" type="text"><label>Song</label>
+					<input id="artist" type="text"><label>Artist</label>
+					<input id="album" type="text"><label>Album</label>
+					<br><br>
+					<button id="btn-addMusic">Add</button>
+					<p id="add-music-change"></p>
+				</div>
+			</div>
 		</div>
 	</main>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/addmusic.js"></script>
 </body>
 </html>
