@@ -1,0 +1,18 @@
+{
+	"artist": [
+		{
+			"name": "Metric",
+			"genre": "Indie Rock",
+			"albums": [
+				{
+					"album_name": "Pagans in Vegas",
+					"songs": ["Lie Lie Lie", "Fortunes", "The Shade", "Celebrate", "Cascades", "For Kicks", "Too Bad, So Sad", "Other Side", "Blind Valentine", "The Governess", "The Face Part I", "The Face Part II"]
+				},
+				{
+					"album_name": "Synthetica",
+					"songs": ["Artificial Nocturne", "Youth Without Youth", "Speed the Collapse", "Breathing Underwater", "Dreams So Real", "Lost Kitten", "The Void", "Synthetica", "Clone", "The Wanderlust", "Nothing But Time"]
+				}
+			]
+		}
+	]
+}

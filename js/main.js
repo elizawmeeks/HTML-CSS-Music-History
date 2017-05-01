@@ -8,19 +8,24 @@ let sideNav = document.getElementById("sideNavBar");
 let addMusicView = document.getElementById("addMusicView");
 let listMusicView = document.getElementById("listMusicView");
 var addMusicButton = document.getElementById("btn-addMusic");
+var moreMusicButton = document.getElementById("moreBtn");
 
 	// Event Listeners themselves
-		// FAB Event Listeners
+		// Floating Action Button Event Listeners
+			// Switch to Add Music View
 addMusic.addEventListener("click", function(event){
 	addMusicView.classList.remove("hidden");
 	listMusicView.classList.add("hidden");
 	sideNav.classList.add("hidden");
-});
+	moreMusicButton.classList.add("hidden");
 
+});
+			// Switch to Music List View
 viewMusic.addEventListener("click", function(event){
 	listMusicView.classList.remove("hidden");
 	addMusicView.classList.add("hidden");
 	sideNav.classList.remove("hidden");
+	moreMusicButton.classList.remove("hidden");
 });
 
 		// Add Music Event Listener
@@ -105,41 +110,69 @@ var dataRequestFailed = (event) => console.log("Oops an error occurred while get
 dataRequest.open("GET", "songs.json");
 dataRequest.send();
 
-	// Function that randomly selects which songs will appear in the List Music View. I did a cool thing!
 function showData (music){
 	var write = document.getElementById("listMusicView");
 	var songOutput = "";
-	for (var i = 0; i < 4; i++){
-			var h = Math.floor((Math.random() * music.artist.length));
-			var artistName = music.artist[h].name;
-			var genre = music.artist[h].genre;
-			var j = Math.floor((Math.random() * music.artist[h].albums.length));
-			var k = Math.floor((Math.random() * music.artist[h].albums[j].songs.length));
-			// This console log just shows the random numbers.
-			console.log("artist h", h, "Album j", j, "songs k", k);
-			var albumName = music.artist[h].albums[j].album_name;
-			var songName = music.artist[h].albums[j].songs[k];
-		songOutput += 	`<div class="row">
-							<div class="col s12">
-								<h2>${songName}</h2>
-								<p> ${artistName} <span class="pink-text">|</span> ${albumName} <span class="pink-text">|</span> ${genre}</p>
-							</div>
-						</div>`;
+	console.log("artist name: ", music.artist[0].genre);
+	for (var i = 0; i < music.artist.length; i++){
+		var artistName = music.artist[i].name;
+		var genre = music.artist[i].genre;
+		for (var j = 0; j < music.artist[i].albums.length; j++){
+			var albumName = music.artist[i].albums[j].album_name;
+			for (var k = 0; k < music.artist[i].albums[j].songs.length; k++){
+				var songName = music.artist[i].albums[j].songs[k];
+				songOutput += 	`<div class="deleteme">
+									<div class="row">
+									<div class="col s10">
+										<h2>${songName}</h2>
+										<p> ${artistName} <span class="pink-text">|</span> ${albumName} <span class="pink-text">|</span> ${genre}</p>
+									</div>
+									<div class="col s2">
+										<button>Delete</button>
+									</div>
+								</div>
+								</div>`;
+			}
+		}
 	}
-
 	write.innerHTML += songOutput;
+	var deleteButton = document.getElementsByTagName("button");
+	for (var i = 0; i < deleteButton.length; i++){
+		deleteButton.item(i).addEventListener("click", function(event){
+			console.log("You clicked delete!");
+			var getParent = event.target.parentNode;
+			var getGParent = getParent.parentNode;
+			var getGGParent = getGParent.parentNode;
+			console.log("getParent", getParent);
+			console.log("getGParent", getGParent);
+			console.log("getGGParent", getGGParent);
+			getGGParent.removeChild(getGParent);
+		})
+	};
 }
 
-// Add Music Functionality
+	// Defunct function that randomly selects which songs will appear in the List Music View. I did a cool thing, but I didn't need to so I'm commenting it out. *weeps*
 
+		// function showData (music){
+		// 	var write = document.getElementById("listMusicView");
+		// 	var songOutput = "";
+		// 	for (var i = 0; i < 4; i++){
+		// 			var h = Math.floor((Math.random() * music.artist.length));
+		// 			var artistName = music.artist[h].name;
+		// 			var genre = music.artist[h].genre;
+		// 			var j = Math.floor((Math.random() * music.artist[h].albums.length));
+		// 			var k = Math.floor((Math.random() * music.artist[h].albums[j].songs.length));
+		// 			// This console log just shows the random numbers.
+		// 			console.log("artist h", h, "Album j", j, "songs k", k);
+		// 			var albumName = music.artist[h].albums[j].album_name;
+		// 			var songName = music.artist[h].albums[j].songs[k];
+		// 		songOutput += 	`<div class="row">
+		// 							<div class="col s12">
+		// 								<h2>${songName}</h2>
+		// 								<p> ${artistName} <span class="pink-text">|</span> ${albumName} <span class="pink-text">|</span> ${genre}</p>
+		// 							</div>
+		// 						</div>`;
+		// 	}
 
-	// Reference to add stuff to json object:
-
-	// // for(i=4; i<=8; i++){
-	// //     var newUser = "user" + i;
-	// //     var newValue = "value" + i;
-	// //     jsonObj.members.viewers[newUser] = newValue ;
-
-	// // }
-
-	// // console.log(jsonObj);
+		// 	write.innerHTML += songOutput;
+		// }

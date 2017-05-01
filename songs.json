@@ -19,56 +19,6 @@
 					"songs": ["Mixed Signals", "Dandelions", "Unrighteous", "Superficial Love", "If This Is Love", "Lost Boy", "Young", "If By Chance", "World War 3", "Safe Haven", "In My Dreams", "First Time"]
 				}
 			]
-		},
-		{
-			"name": "Vienna Teng",
-			"genre": "Indie Folk",
-			"albums": [
-				{
-					"album_name": "Inland Territory",
-					"songs": ["The Last Snowfall", "White Light", "Antebellum", "Kansas", "In Another Life", "Grandmother Song", "Stray Italian Greyhound", "Augustine", "No Gringo", "Watershed", "Radio", "St. Stephen's Cross"]
-				},
-				{
-					"album_name": "Warm Strangers",
-					"songs": ["Feather Moon", "Harbor", "Hope on Fire", "Shine", "Mission Street", "My Medea", "Shasta (Carrie's Song)", "Homecoming (Walter's Song)", "Anna Rose", "Passage", "The Atheist Christmas Carol", "Green Island Serenade"]
-				},
-				{
-					"album_name": "Waking Hour",
-					"songs": ["The Tower", "Momentum", "Gravity", "Daughter", "Between", "Say Uncle", "Drought", "Enough to Go By", "Unwritten Letter #1", "Eric's Song", "Soon Love Soon", "Lullaby for a Stormy Night", "Decade and One"]
-				}
-			]
-		},
-		{
-			"name": "Janelle Monae",
-			"genre": "Contemporary R&B",
-			"albums": [
-				{
-					"album_name": "Metropolis: Suite I (The Chase)",
-					"songs": ["The March of the Wolfmasters", "Violet Stars Happy Hunting!!!", "Many Moons", "Cybertronic Purgatory", "Sincerely, Jane"]
-				},
-				{
-					"album_name": "The ArchAndroid",
-					"songs": ["Suite II Overture", "Dance or Die", "Faster", "Locked Inside", "Sir Greendown", "Cold War", "Tightrope", "Neon Gumbo", "Oh, Maker", "Come Alive (The War of the Roses)", "Mushrooms & Roses", "Suite III Overture", "Neon Valley Street", "Make the Bus", "Wondaland", "57821", "Say You'll Go", "BabopbyeYa"]
-				},
-				{
-					"album_name": "The Electric Lady",
-					"songs": ["Suite IV Electric Overture", "Given' Em What They Love", "Q.U.E.E.N.", "Electric Lady", "Good Morning Midnight (Interlude)", "PrimeTime", "We Were Rock & Roll", "The Chrome Shoppe (Interlude)", "Dance Apocalyptic", "Look into My Eyes", "Suite V Electric Overture", "It's Code", "Ghetto Woman", "Our Favorite Fugitive (Interlude)", "Victory", "Can't Live Without Your Love", "Sally Ride", "Dorothy Dandridge Eyes", "What an Experience"]
-				}
-			]
-		},
-		{
-			"name": "Metric",
-			"genre": "Indie Rock",
-			"albums": [
-				{
-					"album_name": "Pagans in Vegas",
-					"songs": ["Lie Lie Lie", "Fortunes", "The Shade", "Celebrate", "Cascades", "For Kicks", "Too Bad, So Sad", "Other Side", "Blind Valentine", "The Governess", "The Face Part I", "The Face Part II"]
-				},
-				{
-					"album_name": "Synthetica",
-					"songs": ["Artificial Nocturne", "Youth Without Youth", "Speed the Collapse", "Breathing Underwater", "Dreams So Real", "Lost Kitten", "The Void", "Synthetica", "Clone", "The Wanderlust", "Nothing But Time"]
-				}
-			]
 		}
 	]
 }
