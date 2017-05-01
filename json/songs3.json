@@ -1,0 +1,22 @@
+{
+	"artist": [
+		{
+			"name": "Janelle Monae",
+			"genre": "Contemporary R&B",
+			"albums": [
+				{
+					"album_name": "Metropolis: Suite I (The Chase)",
+					"songs": ["The March of the Wolfmasters", "Violet Stars Happy Hunting!!!", "Many Moons", "Cybertronic Purgatory", "Sincerely, Jane"]
+				},
+				{
+					"album_name": "The ArchAndroid",
+					"songs": ["Suite II Overture", "Dance or Die", "Faster", "Locked Inside", "Sir Greendown", "Cold War", "Tightrope", "Neon Gumbo", "Oh, Maker", "Come Alive (The War of the Roses)", "Mushrooms & Roses", "Suite III Overture", "Neon Valley Street", "Make the Bus", "Wondaland", "57821", "Say You'll Go", "BabopbyeYa"]
+				},
+				{
+					"album_name": "The Electric Lady",
+					"songs": ["Suite IV Electric Overture", "Given' Em What They Love", "Q.U.E.E.N.", "Electric Lady", "Good Morning Midnight (Interlude)", "PrimeTime", "We Were Rock & Roll", "The Chrome Shoppe (Interlude)", "Dance Apocalyptic", "Look into My Eyes", "Suite V Electric Overture", "It's Code", "Ghetto Woman", "Our Favorite Fugitive (Interlude)", "Victory", "Can't Live Without Your Love", "Sally Ride", "Dorothy Dandridge Eyes", "What an Experience"]
+				}
+			]
+		}
+	]
+}
