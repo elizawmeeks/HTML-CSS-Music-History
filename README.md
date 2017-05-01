@@ -4,7 +4,7 @@
 
 ## Music History 4
 
-I have so many songs in my JSON file that I split it into 4 files. I made it load with a "more button", but it was so unwieldy that I added pagination and had the music load separately for each page. But I can do the more button!
+I have so many songs in my JSON file that I split it into 4 files. I made it load with a "more button", but it was so unwieldy that I added pagination and had the music load separately for event listener. But I can do the more button!
 
 ### Directions
 
