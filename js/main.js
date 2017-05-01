@@ -1,5 +1,6 @@
 console.log("hihi");
 // Event Listeners to show and hide pages using Floating Action Button, and to add music
+var write = document.getElementById("listMusicView");
 	// Event Listener Variables
 let addMusic = document.getElementById("addMusic");
 let viewMusic = document.getElementById("viewMusic");
@@ -31,6 +32,14 @@ viewMusic.addEventListener("click", function(event){
 		// Add Music Event Listener
 
 // Displaying Songs
+	// Pagination Variables
+var btn1 = document.getElementById("btn1");
+var btn2 = document.getElementById("btn2");
+var btn3 = document.getElementById("btn3");
+var btn4 = document.getElementById("btn4");
+var leftChevron = document.getElementById("leftChevron");
+var rightChevron = document.getElementById("rightChevron");
+	// Load Music List View 1
 	// Variable to load JSON file
 var dataRequest = new XMLHttpRequest();
 	// Event Listeners for loading
@@ -107,11 +116,146 @@ function dataRequestComplete(event){
 var dataRequestFailed = (event) => console.log("Oops an error occurred while getting the data");
 
 	// Getting the JSON file
-dataRequest.open("GET", "songs.json");
+dataRequest.open("GET", "json/songs.json");
 dataRequest.send();
 
+	// Music List View 4 Inside an event listener when you click the "2" button.
+btn1.addEventListener("click", function(){
+		// Changing Pagination navigation styling
+	btn1.classList.remove("waves-effect");
+	btn1.classList.add("active");
+	btn2.classList.remove("active");
+	btn2.classList.add("waves-effect");
+	btn3.classList.remove("active");
+	btn3.classList.add("waves-effect");
+	btn4.classList.remove("active");
+	btn4.classList.add("waves-effect");
+	leftChevron.classList.add("disabled");
+	rightChevron.classList.remove("disabled");
+	var dataRequest = new XMLHttpRequest();
+		// Event Listeners for loading
+	dataRequest.addEventListener("load", dataRequestComplete);
+	dataRequest.addEventListener("error", dataRequestFailed);
+		// Functions tied to Event Listeners
+	function dataRequestComplete(event){
+		console.log("The file has loaded");
+		var data = JSON.parse(event.target.responseText);
+		console.log("The data is: ", data);
+			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
+		write.innerHTML = "";
+		showData(data);
+	}
+
+	var dataRequestFailed = (event) => console.log("Oops an error occurred while getting the data");
+
+		// Getting the JSON file
+	dataRequest.open("GET", "json/songs.json");
+	dataRequest.send();
+});
+
+	// Music List View 2 Inside an event listener when you click the "2" button.
+btn2.addEventListener("click", function(){
+		// Changing Pagination navigation styling
+	btn1.classList.remove("active");
+	btn1.classList.add("waves-effect");
+	btn2.classList.remove("waves-effect");
+	btn2.classList.add("active");
+	btn3.classList.remove("active");
+	btn3.classList.add("waves-effect");
+	btn4.classList.remove("active");
+	btn4.classList.add("waves-effect");
+	leftChevron.classList.remove("disabled");
+	rightChevron.classList.remove("disabled");
+	var dRSongs2 = new XMLHttpRequest();
+		// Event Listeners for loading
+	dRSongs2.addEventListener("load", dRSongs2Complete);
+	dRSongs2.addEventListener("error", dRSongs2Failed);
+		// Functions tied to Event Listeners
+	function dRSongs2Complete(event){
+		console.log("The file has loaded");
+		var data = JSON.parse(event.target.responseText);
+		console.log("The data is: ", data);
+			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
+		write.innerHTML = "";
+		showData(data);
+	}
+
+	var dRSongs2Failed = (event) => console.log("Oops an error occurred while getting the data");
+
+		// Getting the JSON file
+	dRSongs2.open("GET", "json/songs2.json");
+	dRSongs2.send();
+});
+
+	// Music List View 3 Inside an event listener when you click the "2" button.
+btn3.addEventListener("click", function(){
+		// Changing Pagination navigation styling
+	btn1.classList.remove("active");
+	btn1.classList.add("waves-effect");
+	btn2.classList.remove("active");
+	btn2.classList.add("waves-effect");
+	btn3.classList.remove("waves-effect");
+	btn3.classList.add("active");
+	btn4.classList.remove("active");
+	btn4.classList.add("waves-effect");
+	leftChevron.classList.remove("disabled");
+	rightChevron.classList.remove("disabled");
+	var dRSongs3 = new XMLHttpRequest();
+		// Event Listeners for loading
+	dRSongs3.addEventListener("load", dRSongs3Complete);
+	dRSongs3.addEventListener("error", dRSongs3Failed);
+		// Functions tied to Event Listeners
+	function dRSongs3Complete(event){
+		console.log("The file has loaded");
+		var data = JSON.parse(event.target.responseText);
+		console.log("The data is: ", data);
+			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
+		write.innerHTML = "";
+		showData(data);
+	}
+
+	var dRSongs3Failed = (event) => console.log("Oops an error occurred while getting the data");
+
+		// Getting the JSON file
+	dRSongs3.open("GET", "json/songs3.json");
+	dRSongs3.send();
+});
+
+	// Music List View 4 Inside an event listener when you click the "2" button.
+btn4.addEventListener("click", function(){
+		// Changing Pagination navigation styling
+	btn1.classList.remove("active");
+	btn1.classList.add("waves-effect");
+	btn2.classList.remove("active");
+	btn2.classList.add("waves-effect");
+	btn3.classList.remove("active");
+	btn3.classList.add("waves-effect");
+	btn4.classList.remove("waves-effect");
+	btn4.classList.add("active");
+	leftChevron.classList.remove("disabled");
+	rightChevron.classList.add("disabled");
+	var dRSongs4 = new XMLHttpRequest();
+		// Event Listeners for loading
+	dRSongs4.addEventListener("load", dRSongs4Complete);
+	dRSongs4.addEventListener("error", dRSongs4Failed);
+		// Functions tied to Event Listeners
+	function dRSongs4Complete(event){
+		console.log("The file has loaded");
+		var data = JSON.parse(event.target.responseText);
+		console.log("The data is: ", data);
+			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
+		write.innerHTML = "";
+		showData(data);
+	}
+
+	var dRSongs4Failed = (event) => console.log("Oops an error occurred while getting the data");
+
+		// Getting the JSON file
+	dRSongs4.open("GET", "json/songs4.json");
+	dRSongs4.send();
+});
+
 function showData (music){
-	var write = document.getElementById("listMusicView");
 	var songOutput = "";
 	console.log("artist name: ", music.artist[0].genre);
 	for (var i = 0; i < music.artist.length; i++){
