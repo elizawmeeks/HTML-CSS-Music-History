@@ -2,67 +2,59 @@ console.log("hihi");
 // Event Listeners to show and hide pages using Floating Action Button, and to add music
 var write = document.getElementById("listMusicView");
 	// Event Listener Variables
-let addMusic = document.getElementById("addMusic");
-let viewMusic = document.getElementById("viewMusic");
-let profile = document.getElementById("profile");
-let sideNav = document.getElementById("sideNavBar");
-let addMusicView = document.getElementById("addMusicView");
-let listMusicView = document.getElementById("listMusicView");
-var addMusicButton = document.getElementById("btn-addMusic");
-var moreMusicButton = document.getElementById("moreBtn");
+let profile = $("#profile")[0];
+let sideNav = $("#sideNavBar")[0];
+let addMusicView = $("#addMusicView")[0];
+let listMusicView = $("#listMusicView")[0];
 
 	// Event Listeners themselves
 		// Floating Action Button Event Listeners
 			// Switch to Add Music View
-addMusic.addEventListener("click", function(event){
+$("#addMusic").click(function(event){
 	addMusicView.classList.remove("hidden");
 	listMusicView.classList.add("hidden");
 	sideNav.classList.add("hidden");
-	moreMusicButton.classList.add("hidden");
 
 });
 			// Switch to Music List View
-viewMusic.addEventListener("click", function(event){
+$("#viewMusic").click(function(event){
 	listMusicView.classList.remove("hidden");
 	addMusicView.classList.add("hidden");
 	sideNav.classList.remove("hidden");
-	moreMusicButton.classList.remove("hidden");
 });
 
 		// Add Music Event Listener
 
 // Displaying Songs
 	// Pagination Variables
-var btn1 = document.getElementById("btn1");
-var btn2 = document.getElementById("btn2");
-var btn3 = document.getElementById("btn3");
-var btn4 = document.getElementById("btn4");
-var leftChevron = document.getElementById("leftChevron");
-var rightChevron = document.getElementById("rightChevron");
+var btn1 = $("#btn1")[0];
+var btn2 = $("#btn2")[0];
+var btn3 = $("#btn3")[0];
+var btn4 = $("#btn4")[0];
+var leftChevron = $("#leftChevron")[0];
+var rightChevron = $("#rightChevron")[0];
 	// Load Music List View 1
 	// Variable to load JSON file
-var dataRequest = new XMLHttpRequest();
-	// Event Listeners for loading
-dataRequest.addEventListener("load", dataRequestComplete);
-dataRequest.addEventListener("error", dataRequestFailed);
+$.ajax({
+	url: "json/songs.json"
+}).done(dataRequestComplete);
+
 	// Functions tied to Event Listeners
-function dataRequestComplete(event){
+function dataRequestComplete(data){
 	console.log("The file has loaded");
-	var data = JSON.parse(event.target.responseText);
 	console.log("The data is: ", data);
+			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
+	write.innerHTML = "";
 	showData(data);
 	// Event Listener for add music button, the function has to exist inside the dataRequestComplete function so that it has access to the data we're getting from the XHR. Stop moving it out! It doesn't work!
-	addMusicButton.addEventListener("click", function(event){
+	$("#btn-addMusic").click(function(event){
 		console.log("you clicked the button");
 		console.log("dataRequest", data);
 			// variables to add stuff to the object:
-		var addSong = document.getElementById("song");
-		var addAlbum = document.getElementById("album");
-		var addArtist = document.getElementById("artist");
-		var reportChange = document.getElementById("add-music-change");
-		var userArtist = addArtist.value;
-		var userAlbum = addAlbum.value;
-		var userSong = addSong.value;
+		var reportChange = $("#add-music-change")[0];
+		var userArtist = $("#artist")[0].value;
+		var userAlbum = $("#album")[0].value;
+		var userSong = $("#song")[0].value;
 			for (var i = 0; i < data.artist.length; i++){
 				// console.log("artist name: ", data.artist[i].name);
 				for (var j = 0; j < data.artist[i].albums.length; j++){
@@ -113,14 +105,8 @@ function dataRequestComplete(event){
 	});
 }
 
-var dataRequestFailed = (event) => console.log("Oops an error occurred while getting the data");
-
-	// Getting the JSON file
-dataRequest.open("GET", "json/songs.json");
-dataRequest.send();
-
 	// Music List View 4 Inside an event listener when you click the "2" button.
-btn1.addEventListener("click", function(){
+$("#btn1").click(function(){
 		// Changing Pagination navigation styling
 	btn1.classList.remove("waves-effect");
 	btn1.classList.add("active");
@@ -132,29 +118,14 @@ btn1.addEventListener("click", function(){
 	btn4.classList.add("waves-effect");
 	leftChevron.classList.add("disabled");
 	rightChevron.classList.remove("disabled");
-	var dataRequest = new XMLHttpRequest();
-		// Event Listeners for loading
-	dataRequest.addEventListener("load", dataRequestComplete);
-	dataRequest.addEventListener("error", dataRequestFailed);
-		// Functions tied to Event Listeners
-	function dataRequestComplete(event){
-		console.log("The file has loaded");
-		var data = JSON.parse(event.target.responseText);
-		console.log("The data is: ", data);
-			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
-		write.innerHTML = "";
-		showData(data);
-	}
 
-	var dataRequestFailed = (event) => console.log("Oops an error occurred while getting the data");
-
-		// Getting the JSON file
-	dataRequest.open("GET", "json/songs.json");
-	dataRequest.send();
+	$.ajax({
+		url: "json/songs.json"
+	}).done(dataRequestComplete);
 });
 
 	// Music List View 2 Inside an event listener when you click the "2" button.
-btn2.addEventListener("click", function(){
+$("#btn2").click(function(){
 		// Changing Pagination navigation styling
 	btn1.classList.remove("active");
 	btn1.classList.add("waves-effect");
@@ -166,29 +137,20 @@ btn2.addEventListener("click", function(){
 	btn4.classList.add("waves-effect");
 	leftChevron.classList.remove("disabled");
 	rightChevron.classList.remove("disabled");
-	var dRSongs2 = new XMLHttpRequest();
-		// Event Listeners for loading
-	dRSongs2.addEventListener("load", dRSongs2Complete);
-	dRSongs2.addEventListener("error", dRSongs2Failed);
+	$.ajax({
+		url: "json/songs2.json"
+	}).done(dRSongs2Complete);
 		// Functions tied to Event Listeners
-	function dRSongs2Complete(event){
-		console.log("The file has loaded");
-		var data = JSON.parse(event.target.responseText);
+	function dRSongs2Complete(data){
 		console.log("The data is: ", data);
 			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
 		write.innerHTML = "";
 		showData(data);
 	}
-
-	var dRSongs2Failed = (event) => console.log("Oops an error occurred while getting the data");
-
-		// Getting the JSON file
-	dRSongs2.open("GET", "json/songs2.json");
-	dRSongs2.send();
 });
 
 	// Music List View 3 Inside an event listener when you click the "2" button.
-btn3.addEventListener("click", function(){
+$("#btn3").click(function(){
 		// Changing Pagination navigation styling
 	btn1.classList.remove("active");
 	btn1.classList.add("waves-effect");
@@ -200,29 +162,21 @@ btn3.addEventListener("click", function(){
 	btn4.classList.add("waves-effect");
 	leftChevron.classList.remove("disabled");
 	rightChevron.classList.remove("disabled");
-	var dRSongs3 = new XMLHttpRequest();
-		// Event Listeners for loading
-	dRSongs3.addEventListener("load", dRSongs3Complete);
-	dRSongs3.addEventListener("error", dRSongs3Failed);
+	$.ajax({
+		url: "json/songs3.json"
+	}).done(dRSongs3Complete);
+
 		// Functions tied to Event Listeners
-	function dRSongs3Complete(event){
-		console.log("The file has loaded");
-		var data = JSON.parse(event.target.responseText);
+	function dRSongs3Complete(data){
 		console.log("The data is: ", data);
 			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
 		write.innerHTML = "";
 		showData(data);
 	}
-
-	var dRSongs3Failed = (event) => console.log("Oops an error occurred while getting the data");
-
-		// Getting the JSON file
-	dRSongs3.open("GET", "json/songs3.json");
-	dRSongs3.send();
 });
 
 	// Music List View 4 Inside an event listener when you click the "2" button.
-btn4.addEventListener("click", function(){
+$("#btn4").click(function(){
 		// Changing Pagination navigation styling
 	btn1.classList.remove("active");
 	btn1.classList.add("waves-effect");
@@ -234,25 +188,16 @@ btn4.addEventListener("click", function(){
 	btn4.classList.add("active");
 	leftChevron.classList.remove("disabled");
 	rightChevron.classList.add("disabled");
-	var dRSongs4 = new XMLHttpRequest();
-		// Event Listeners for loading
-	dRSongs4.addEventListener("load", dRSongs4Complete);
-	dRSongs4.addEventListener("error", dRSongs4Failed);
+	$.ajax({
+		url:"json/songs4.json"
+	}).done(dRSongs4Complete);
 		// Functions tied to Event Listeners
-	function dRSongs4Complete(event){
-		console.log("The file has loaded");
-		var data = JSON.parse(event.target.responseText);
+	function dRSongs4Complete(data){
 		console.log("The data is: ", data);
 			// Adding "" to write.innerHTML makes it so the songs don't add to the bottom, but actually replace the songs. It was getting too long and unwieldy.
 		write.innerHTML = "";
 		showData(data);
 	}
-
-	var dRSongs4Failed = (event) => console.log("Oops an error occurred while getting the data");
-
-		// Getting the JSON file
-	dRSongs4.open("GET", "json/songs4.json");
-	dRSongs4.send();
 });
 
 function showData (music){
@@ -280,16 +225,16 @@ function showData (music){
 		}
 	}
 	write.innerHTML += songOutput;
-	var deleteButton = document.getElementsByTagName("button");
+	var deleteButton = $("button");
 	for (var i = 0; i < deleteButton.length; i++){
-		deleteButton.item(i).addEventListener("click", function(event){
+		deleteButton[i].addEventListener("click", function(event){
 			console.log("You clicked delete!");
 			var getParent = event.target.parentNode;
 			var getGParent = getParent.parentNode;
 			var getGGParent = getGParent.parentNode;
-			console.log("getParent", getParent);
-			console.log("getGParent", getGParent);
-			console.log("getGGParent", getGGParent);
+			// console.log("getParent", getParent);
+			// console.log("getGParent", getGParent);
+			// console.log("getGGParent", getGGParent);
 			getGGParent.removeChild(getGParent);
 		})
 	};
